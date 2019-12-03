@@ -1,6 +1,6 @@
 package com.air.flow;
 
-public class VelocityTriangle implements VelocityTriangleInterface {
+public class VelocityTriangle {
 	
 	private double U;
 	private double C;
