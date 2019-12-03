@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="javaSource"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Program Files/Wolfram Research/Mathematica/10.0/SystemFiles/Links/JLink/JLink.jar"/>
 	<classpathentry kind="output" path="javaOutput"/>
 </classpath>
