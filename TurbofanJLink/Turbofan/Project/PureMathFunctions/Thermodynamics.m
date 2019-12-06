@@ -9,11 +9,15 @@ Begin["`Private`"] (* Begin Private Context *)
 dei flussi isentropici e non... *)
 
 (* Compressione isentropica: Tin -> Tout *)
-ToutIsenByComp[Tin_,beta_,gamma_]:=Tin*beta^((gamma-1)/gamma);
+ToutByIsenTrans[Tin_,Pout_,Pin_,gamma_]:=Tin*(Pout/Pin)^((gamma-1)/gamma);
 
 (* Pressione di uscita in una trasformazione isentropica: *)
-PoutIsenByExpansion[Pin_,Tin_,ToutIsen_,gamma_]:= Pin*(Tin/ToutIsen)^(gamma/(gamma-1));
+PoutIsenTrans[Pin_,Tin_,ToutIsen_,gamma_]:= Pin*(ToutIsen/Tin)^(gamma/(gamma-1));
 
+(* FLUSSI ISENTROPICI COMPRIMIBILI A UN DATO MACH *)
+Ttot[Tstat_,gamma_,Mach_]:=Tstat*(1+((gamma-1)/2)*Mach^2);
+
+Ptot[Pstat_,gamma_,Mach_]:=Pstat*(1+((gamma-1)/2)*Mach^2)^(1/(gamma-1));
 
 
 End[] (* End Private Context *)
