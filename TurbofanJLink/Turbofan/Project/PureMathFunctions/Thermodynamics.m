@@ -17,7 +17,11 @@ PoutIsenTrans[Pin_,Tin_,ToutIsen_,gamma_]:= Pin*(ToutIsen/Tin)^(gamma/(gamma-1))
 (* FLUSSI ISENTROPICI COMPRIMIBILI A UN DATO MACH *)
 Ttot[Tstat_,gamma_,Mach_]:=Tstat*(1+((gamma-1)/2)*Mach^2);
 
+Tstat[Ttot_,gamma_,Mach_]:=Ttot/(1+((gamma-1)/2)*Mach^2);
+
 Ptot[Pstat_,gamma_,Mach_]:=Pstat*(1+((gamma-1)/2)*Mach^2)^(1/(gamma-1));
+
+Psta[Ptot_,gamma_,Mach_]:=Ptot/(1+((gamma-1)/2)*Mach^2)^(1/(gamma-1));
 
 
 End[] (* End Private Context *)
