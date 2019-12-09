@@ -3,6 +3,8 @@
 BeginPackage["Turbofan`Project`PureMathFunctions`Thermodynamics`"]
 (* Exported symbols added here with SymbolName::usage *)  
 
+Ttot::usage="Ttot[Tstat,gamma,Mach]";
+
 Begin["`Private`"] (* Begin Private Context *) 
 
 (* Il package contiene tutte le funzioni rekative alla termodinamica 
