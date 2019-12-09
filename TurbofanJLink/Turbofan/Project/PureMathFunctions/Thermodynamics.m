@@ -12,7 +12,7 @@ dei flussi isentropici e non... *)
 ToutByIsenTrans[Tin_,Pout_,Pin_,gamma_]:=Tin*(Pout/Pin)^((gamma-1)/gamma);
 
 (* Pressione di uscita in una trasformazione isentropica: *)
-PoutIsenTrans[Pin_,Tin_,ToutIsen_,gamma_]:= Pin*(ToutIsen/Tin)^(gamma/(gamma-1));
+PoutByIsenTrans[Pin_,Tin_,ToutIsen_,gamma_]:= Pin*(ToutIsen/Tin)^(gamma/(gamma-1));
 
 (* FLUSSI ISENTROPICI COMPRIMIBILI A UN DATO MACH *)
 Ttot[Tstat_,gamma_,Mach_]:=Tstat*(1+((gamma-1)/2)*Mach^2);
