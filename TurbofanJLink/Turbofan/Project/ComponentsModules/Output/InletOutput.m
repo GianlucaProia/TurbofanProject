@@ -10,10 +10,7 @@ BeginPackage["Turbofan`Project`ComponentsModules`Output`InletOutput`",
 Begin["`Private`"] (* Begin Private Context *) 
 
 	CalculateInletOutput[inletObj_] := Module[{},
-		CalculateMachOutput[inletObj];
 		CalculateInletTout[inletObj];
-		CalculateInletT0out[inletObj];
-		CalculateInletPout[inletObj];
 		CalculateInletPout[inletObj];
 		CalculateInletGammaOut[inletObj];
 	]
