@@ -1,17 +1,20 @@
 (* Wolfram Language Package *)
 
-BeginPackage["Turbofan`Project`ComponentsModules`Output`FanOutput`"]
+BeginPackage["Turbofan`Project`ComponentsModules`Output`FanOutput`",
+    {
+    "Turbofan`Project`ComponentsModulesImp`Output`FanOutputImp`"
+    }]
 (* Exported symbols added here with SymbolName::usage *)  
 
 Begin["`Private`"] (* Begin Private Context *) 
 
 
 	CalculateFanOutput[fanObj_]:=Module[{},
-	 CalculateFanMachOut[fanObj];
-	 CalculateFanTout[fanObj];
-	 CalculateFanPout[fanObj];
-	 CalculateFanMassFlowIn[fanObj];
-	 CalculateFanMassFlowOut[fanObj];	    
+		 CalculateFanTout[fanObj];
+		 CalculateFanPout[fanObj];
+		 CalculateFanMassFlowIn[fanObj];
+		 CalculateFanMassFlowOut[fanObj];
+		 CalculateFanGammaout[fanObj];	    
 	]
 
 
