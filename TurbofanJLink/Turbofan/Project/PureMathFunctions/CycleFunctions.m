@@ -14,7 +14,10 @@ Begin["`Private`"] (* Begin Private Context *)
 	PoutInlet[ToutInlet_,Tin_,Pin_,gamma_,epsilonD_]:=epsilonD*((ToutInlet/Tin)^(gamma/(gamma-1)))*Pin;
 	
 	(* FAN *)
-	
+	ToutFan[Tin_,Pin_,betaFan_,gamma_,etaFan_]:=Tin+(1/etaFan)*(ToutByIsenTrans[Tin,PoutFan[Pin,betaFan],Pin,gamma]-Tin);
+	PoutFan[Pin_,betaFan_]:=betaFan*Pin;
+	FanMassFlowIn[massFlowRateTot_,bpr_]:=massFlowRateTot/(1+bpr);
+	FanMassFlowOut[massFlowRateTot_,bpr_]:=bpr*massFlowRateTot;
 	(* COMPRESSORE *)
 	
 	(* COMBUSTORE *)
