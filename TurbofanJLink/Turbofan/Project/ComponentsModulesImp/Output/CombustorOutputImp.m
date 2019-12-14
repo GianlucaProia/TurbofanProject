@@ -24,8 +24,7 @@ Begin["`Private`"] (* Begin Private Context *)
 	     	cpoutCombustor=combustorObj@getAirFlowIn[]@getCp[];   
 	        combustorObj@getAirFlowOut[]@setCp[cpoutCombustor];
 	    ]
-	    
-	    
+
 	    CalculateCombustorAlpha[combustorObj_]:=Module[{alphaCombustor},
 	     	alphaCombustor=AlphaCombustor[
 	     	    combustorObj@getAirFlowIn@getT[],
