@@ -24,7 +24,12 @@ Begin["`Private`"] (* Begin Private Context *)
 	    PassFlowParametersOnetoOne[compressorObj,combustorObj];
 	    CalculateCombustorOutput[compressorObj];
 	    PassFlowParametersOnetoOne[combustorObj,compTurbineObj];
-	    
+	    CalculateCompressorTurbineOutput[compressorObj,compTurbineObj];
+	    PassFlowParametersOnetoOne[compTurbineObj,fanTurbineObj];
+	    CalculateFanTurbineOutput[fanObj,fanTurbineObj];
+	    fanObj@setAirFlowOut[fanObj@getAirFlowSecond[]];
+	    PassFlowParametersTwotoOne[{fanObj,fanTurbineObj},nozzleObj];
+	    CalculateNozzleOutput[nozzleObj];
 	]
 
 
