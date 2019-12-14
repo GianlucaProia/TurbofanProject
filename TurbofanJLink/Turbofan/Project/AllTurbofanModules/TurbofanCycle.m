@@ -4,7 +4,7 @@ BeginPackage["Turbofan`Project`AllTurbofanModules`TurbofanCycle`",
     {
     (* PASS PARAMETERS... *)
     "Turbofan`Project`AllJavaObjInstances`Passparameters`PassParameters`",
-    (* 	COMPONENTI... *)
+    (* 	COMPONENTS... *)
     "Turbofan`Project`ComponentsModules`Output`FanOutput`",
     "Turbofan`Project`ComponentsModules`Output`InletOutput`",
     "Turbofan`Project`ComponentsModules`Output`CompressorOutput`"
@@ -17,8 +17,10 @@ Begin["`Private`"] (* Begin Private Context *)
 	    CalculateInletOutput[inletObj];
 	    PassFlowParametersOnetoOne[inletObj,fanObj];
 	    CalculateFanOutput[fanObj];
+	    fanObj@setAirFlowOut[fanObj@getAirFlowFirstOut[]];
 	    PassFlowParametersOnetoOne[fanObj,compressorObj];
 	    CalculateCompressorOutput[compressorObj];
+	    PassFlowParametersOnetoOne[compressorObj,combustorObj];
 	]
 
 

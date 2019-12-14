@@ -30,6 +30,8 @@ Begin["`Private`"] (* Begin Private Context *)
 	
 	(*====================================================*)
 	(* COMBUSTORE *)
+	PoutCombustor[Pin_,etaPCombustor_]:=etaPCombustor*Pin;
+	AlphaCombustor[Tin_,Tout_,Q_,cp_,etaBurner_]:=etaBurner*Q/(cp(Tout-Tin));
 	
 	(* TURBINA *)
 	
