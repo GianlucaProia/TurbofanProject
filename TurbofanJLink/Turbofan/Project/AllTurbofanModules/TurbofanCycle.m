@@ -7,13 +7,14 @@ BeginPackage["Turbofan`Project`AllTurbofanModules`TurbofanCycle`",
     (* 	COMPONENTS... *)
     "Turbofan`Project`ComponentsModules`Output`FanOutput`",
     "Turbofan`Project`ComponentsModules`Output`InletOutput`",
-    "Turbofan`Project`ComponentsModules`Output`CompressorOutput`"
+    "Turbofan`Project`ComponentsModules`Output`CompressorOutput`",
+    "Turbofan`Project`ComponentsModules`Output`CombustorOutput`"
     }]
 (* Exported symbols added here with SymbolName::usage *)  
 
 Begin["`Private`"] (* Begin Private Context *) 
 
-	CalculateCycleByComponents[inletObj_,fanObj_,compressorObj_,combustorObj_,turbineObj_,mixerObj_,nozzleObj_]:=Module[{},
+	CalculateCycleByComponents[inletObj_,fanObj_,compressorObj_,combustorObj_,compTurbineObj_,fanTurbineObj_,mixerObj_,nozzleObj_]:=Module[{},
 	    CalculateInletOutput[inletObj];
 	    PassFlowParametersOnetoOne[inletObj,fanObj];
 	    CalculateFanOutput[fanObj];
@@ -21,6 +22,9 @@ Begin["`Private`"] (* Begin Private Context *)
 	    PassFlowParametersOnetoOne[fanObj,compressorObj];
 	    CalculateCompressorOutput[compressorObj];
 	    PassFlowParametersOnetoOne[compressorObj,combustorObj];
+	    CalculateCombustorOutput[compressorObj];
+	    PassFlowParametersOnetoOne[combustorObj,compTurbineObj];
+	    
 	]
 
 
