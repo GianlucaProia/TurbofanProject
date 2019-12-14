@@ -11,6 +11,7 @@ Begin["`Private`"] (* Begin Private Context *)
 	CalculateCombustorOutput[combustorObj_]:=Module[{},
 	 	CalculateCombustorTout[combustorObj];   
 	    CalculateCombustorPout[combustorObj];
+	    CalculateCombustorCpout[combustorObj];
 	    CalculateCombustorAlpha[combustorObj];
 	]
 
