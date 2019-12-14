@@ -8,7 +8,8 @@ BeginPackage["Turbofan`Project`AllTurbofanModules`TurbofanCycle`",
     "Turbofan`Project`ComponentsModules`Output`FanOutput`",
     "Turbofan`Project`ComponentsModules`Output`InletOutput`",
     "Turbofan`Project`ComponentsModules`Output`CompressorOutput`",
-    "Turbofan`Project`ComponentsModules`Output`CombustorOutput`"
+    "Turbofan`Project`ComponentsModules`Output`CombustorOutput`",
+    "Turbofan`Project`ComponentsModules`Output`TurbineOutput`"
     }]
 (* Exported symbols added here with SymbolName::usage *)  
 
@@ -16,19 +17,19 @@ Begin["`Private`"] (* Begin Private Context *)
 
 	CalculateCycleByComponents[inletObj_,fanObj_,compressorObj_,combustorObj_,compTurbineObj_,fanTurbineObj_,mixerObj_,nozzleObj_]:=Module[{},
 	    CalculateInletOutput[inletObj];
-	    PassFlowParametersOnetoOne[inletObj,fanObj];
+	    	PassFlowParametersOnetoOne[inletObj,fanObj];
 	    CalculateFanOutput[fanObj];
 	    fanObj@setAirFlowOut[fanObj@getAirFlowFirstOut[]];
-	    PassFlowParametersOnetoOne[fanObj,compressorObj];
+	    	PassFlowParametersOnetoOne[fanObj,compressorObj];
 	    CalculateCompressorOutput[compressorObj];
-	    PassFlowParametersOnetoOne[compressorObj,combustorObj];
+	    	PassFlowParametersOnetoOne[compressorObj,combustorObj];
 	    CalculateCombustorOutput[compressorObj];
-	    PassFlowParametersOnetoOne[combustorObj,compTurbineObj];
+	    	PassFlowParametersOnetoOne[combustorObj,compTurbineObj];
 	    CalculateCompressorTurbineOutput[compressorObj,compTurbineObj];
-	    PassFlowParametersOnetoOne[compTurbineObj,fanTurbineObj];
+	    	PassFlowParametersOnetoOne[compTurbineObj,fanTurbineObj];
 	    CalculateFanTurbineOutput[fanObj,fanTurbineObj];
 	    fanObj@setAirFlowOut[fanObj@getAirFlowSecond[]];
-	    PassFlowParametersTwotoOne[{fanObj,fanTurbineObj},nozzleObj];
+	    	PassFlowParametersTwotoOne[{fanObj,fanTurbineObj},nozzleObj];
 	    CalculateNozzleOutput[nozzleObj];
 	]
 
