@@ -47,7 +47,7 @@ Begin["`Private`"] (* Begin Private Context *)
 			turbineCompObj@getAirFlowIn[]@getT[],
 			combustorObj@getAplha[]			
 		];
-		turbineFanObj@getAirFlowout[]@setT[fanTurbineTout];	
+		turbineFanObj@getAirFlowOut[]@setT[fanTurbineTout];	
 	]	
 	
 	CalculatePoutFanTurbine[turbineFanObj_]:=Module[{fanTurbinePout},
