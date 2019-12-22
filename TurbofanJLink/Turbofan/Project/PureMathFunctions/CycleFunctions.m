@@ -40,8 +40,8 @@ Begin["`Private`"] (* Begin Private Context *)
 	PoutCompressorTurbine[Pin_,Tin_,Tout_,etaAdiabatic_,gamma_]:=PoutByIsenTrans[Pin,Tin,ToutIsenByAdiabaticEta[Tin,Tout,etaAdiabatic],gamma];
 	(*====================================================*)
 	(* TURBINA FAN *)
-(*	ToutFanTurbine[]:=
-	PoutFanTurbine[]:=*)
+	ToutFanTurbine[bpr_,ToutFan_,TinFan_,ToutComp_,etaMeccComp_,etaMeccaTurb_,TinTurbinaComp_,f_]:=TinTurbinaComp-(1/f)*((1+bpr)*(ToutFan-TinFan)+(ToutComp-ToutFan))/(etaMeccaTurb*etaMeccComp*((1/f)+1));
+	PoutFanTurbine[Pin_,Tin_,Tout_,etaAdiabatic_,gamma_]:=PoutByIsenTrans[Pin,Tin,ToutIsenByAdiabaticEta[Tin,Tout,etaAdiabatic],gamma];
 		
 	(*====================================================*)
 	(* MIXER *)
