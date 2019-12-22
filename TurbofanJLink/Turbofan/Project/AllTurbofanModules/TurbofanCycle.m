@@ -33,6 +33,18 @@ Begin["`Private`"] (* Begin Private Context *)
 	    CalculateNozzleOutput[nozzleObj];
 	]
 
+	CalculateCycleByTurbofan[turbofanObj_]:=Module[{},
+	 	CalculateCycleByComponents[
+	 	 	turbofanObj@getInlet[],
+	 	 	turbofanObj@getFan[],
+	 	 	turbofanObj@getCompressor[],
+	 	 	turbofanObj@getCombustor[],
+	 	 	turbofanObj@getCompressorTurbine[],
+	 	 	turbofanObj@getFanTurbine[],
+	 	 	turbofanObj@getMixer[],
+	 	 	turbofanObj@getNozzle[]   
+	 	];   
+	]
 
 End[] (* End Private Context *)
 
