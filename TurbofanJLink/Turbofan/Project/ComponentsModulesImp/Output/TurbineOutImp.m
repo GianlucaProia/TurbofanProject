@@ -18,7 +18,7 @@ Begin["`Private`"] (* Begin Private Context *)
 	 		compressorObj@getAirflowOut[]@getMassFlowRate[],
 	 		compressorObj@getEtaMecc[],
 	 		turbineObj@getEtaMecc[],
-	 		combustorObj@getAirFlowout[]@getFuelMassFlowRate[],
+	 		combustorObj@getAirFlowOut[]@getFuelMassFlowRate[],
 	 		turbineObj@getAirFlowIn[]@getT[]
 	 	];   
 	   turbineObj@getAirFlowOut[]@setT[compTurbineTout]; 
