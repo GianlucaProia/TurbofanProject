@@ -16,6 +16,9 @@ ToutByIsenTrans[Tin_,Pout_,Pin_,gamma_]:=Tin*(Pout/Pin)^((gamma-1)/gamma);
 (* Pressione di uscita in una trasformazione isentropica: *)
 PoutByIsenTrans[Pin_,Tin_,ToutIsen_,gamma_]:= Pin*(ToutIsen/Tin)^(gamma/(gamma-1));
 
+(* Temperatura di uscita da un componente con un rendimento adiabatico: *)
+ToutIsenByAdiabaticEta[Tin_,Tout_,etaAdiabatic_]:=Tin-(Tin-Tout)/etaAdiabatic;
+
 (* FLUSSI ISENTROPICI COMPRIMIBILI A UN DATO MACH *)
 Ttot[Tstat_,gamma_,Mach_]:=Tstat*(1+((gamma-1)/2)*Mach^2);
 

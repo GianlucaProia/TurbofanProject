@@ -9,6 +9,30 @@ BeginPackage["Turbofan`Project`ComponentsModulesImp`Output`TurbineOutputImp`",
 
 Begin["`Private`"] (* Begin Private Context *) 
 
+	CalculateToutCompressorTurbine[combustorObj_,compressorObj_,turbineObj_]:=Module[{compTurbineTout},
+	 	compTurbineTout=CalculateToutCompressorTurbine[
+	 		compressorObj@getAirFlowIn[]@getT[],
+	 		compressorObj@getAirFlowOut[]@getT[],
+	 		compressorObj@getAirflowOut[]@getMassFlowRate[],
+	 		compressorObj@getEtaMecc[],
+	 		turbineObj@getEtaMecc[],
+	 		combustorObj@getAirFlowout[]@getFuelMassFlowRate[],
+	 		turbineObj@getAirFlowIn[]@getT[]
+	 	];   
+	   turbineObj@getAirFlowOut[]@setT[compTurbineTout]; 
+	]
+
+	CalculatePoutCompressorTurbine[turbineObj_]:=Module[{compTurbinePout},
+		compTurbinePout=CalculatePoutCompressorTurbine[
+		 	turbineObj@getAirFlowIn[]@getP[],
+		 	turbineObj@getAirFlowIn[]@getT[],
+		 	turbineObj@getAirFlowOut[]@getT[],
+		 	turbineObj@getEtaAdiabatic[],
+		 	turbineObj@getGamma[]   
+		];
+		turbineObj@getAirFlowOut[]@setP[compTurbinePout];
+	]	
+
 End[] (* End Private Context *)
 
 EndPackage[]

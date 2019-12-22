@@ -8,14 +8,14 @@ BeginPackage["Turbofan`Project`ComponentsModules`Output`TurbineOutput`",
 
 Begin["`Private`"] (* Begin Private Context *) 
 
-	CalculateFanTurbineOutput[fanObj_,fanTurbineObj_]:=Module[{},
+(*	CalculateFanTurbineOutput[fanObj_,fanTurbineObj_]:=Module[{},
 	    
 	    
-	]
+	]*)
 	
-	CalculateCompressorTurbineOutput[compressorObj_,compTurbineObj_]:=Module[{},
-	    
-	    
+	CalculateCompressorTurbineOutput[combustorObj_,compressorObj_,turbineObj_]:=Module[{},
+	   CalculateToutCompressorTurbine[combustorObj,compressorObj,turbineObj];
+	   CalculatePoutCompressorTurbine[turbineObj];
 	]
 	
 
