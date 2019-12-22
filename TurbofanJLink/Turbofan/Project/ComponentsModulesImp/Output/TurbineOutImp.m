@@ -34,14 +34,29 @@ Begin["`Private`"] (* Begin Private Context *)
 	]
 	
 	(* Turbina del fan *)
-	CalculateToutFanTurbine[combustorObj_,compressorObj_,fanObj_,fanTurbineObj_]:=Module[{},
+	 CalculateToutFanTurbine[fanObj_,compressorObj_,combustorObj_,turbineFanObj_,turbineCompObj_]:=Module[{fanTurbineTout},
 		fanTurbineTout=ToutFanTurbine[
-				
-		]	
-		
-		
-		
+			fanObj@getBPR[],
+			fanObj@getAirFlowOut[]@getT[],
+			fanObj@getAirFlowIn[]@getT[],
+			compressorObj@getAirFlowOut[]@getT[],
+			compressorObj@getEtaMecc[],
+			turbineCompObj@getAirFlowIn[]@getT[],
+			combustorObj@getAplha[]			
+		];
+		turbineFanObj@getAirFlowout[]@setT[fanTurbineTout];	
 	]	
+	
+	CalculatePoutFanTurbine[turbineFanObj_]:=Module[{fanTurbinePout},
+			fanTurbinePout=PoutFanTurbine[
+				turbineFanObj@getAirFlowIn[]@getP[],
+				turbineFanObj@getAirFlowIn[]@getT[],
+				turbineFanObj@getAirFlowOut[]@getT[],
+				turbineFanObj@getEtaAdiabatic[],
+				turbineFanObj@getAirFlowIn[]@getGamma[]
+			];
+		turbineFanObj@getAirFlowOut[]@setP[fanTurbinePout];
+	]
 
 End[] (* End Private Context *)
 
