@@ -40,13 +40,13 @@ Begin["`Private`"] (* Begin Private Context *)
 	    fanObj@getAirFlowFirstOut[]@setMassFlowRate[massFlowIn];
 	]
 	
-	CalculateFanMassFlowOut[fanObj_]=Module[{massFlowRateTot,massFlowIn},
+	CalculateFanMassFlowOut[fanObj_]=Module[{massFlowRateTot,massFlowOut},
 	 	massFlowRateTot=fanObj@getAirFlowIn[]@getMassFlowRate[];   
-	    massFlowIn=FanMassFlowOut[
+	    massFlowOut=FanMassFlowOut[
 	    	massFlowRateTot,
 	    	fanObj@getBPR[]
 	    ];
-	    fanObj@getAirFlowSecondOut[]@setMassFlowRate[massFlowIn];
+	    fanObj@getAirFlowSecondOut[]@setMassFlowRate[massFlowOut];
 	]
 	
 	CalculateFanGammaout[fanObj_]:=Module[{gammaIn},
