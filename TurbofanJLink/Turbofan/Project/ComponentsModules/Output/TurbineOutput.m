@@ -18,7 +18,7 @@ Begin["`Private`"] (* Begin Private Context *)
 	   CalculatePoutCompressorTurbine[turbineObj];
 	]
 	
-
+	
 
 
 End[] (* End Private Context *)
