@@ -8,9 +8,9 @@ public class Fan {
 	private Blade blade;
 	private int numberBlades;
 	
-	private AirFlow airFlowTotal; // In uscita dalla presa dinamica... 
-	private AirFlow airFlowExternal; // Flusso esterno ai componenti...
-	private AirFlow airFlowCompressor; // Flusso interno a tutti i componenti...
+	private AirFlow airFlowIn; // In uscita dalla presa dinamica... 
+	private AirFlow airFlowFirstOut; // Flusso interno a tutti i componenti...
+	private AirFlow airFlowSecondOut; // Flusso esterno ai componenti...
 	
 	private double BPR;
 	
@@ -18,7 +18,7 @@ public class Fan {
 	private double etaMeccanico;
 	private double etaAdiabatico;
 	
-	private double beta;
+	private double betaFan;
 	
 	
 }
