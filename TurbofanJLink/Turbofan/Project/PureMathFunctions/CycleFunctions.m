@@ -45,7 +45,8 @@ Begin["`Private`"] (* Begin Private Context *)
 		
 	(*====================================================*)
 	(* MIXER *)
-
+	ToutMixer[bpr_,ToutFan_,ToutFanTurbine_]:=(1/(1+bpr))*ToutFanTurbine+(bpr/(1+bpr))*ToutFan;
+	PoutMIxer[PoutFan_]:=PoutFan;
 	(*====================================================*)	
 	(* UGELLO *)
 	
