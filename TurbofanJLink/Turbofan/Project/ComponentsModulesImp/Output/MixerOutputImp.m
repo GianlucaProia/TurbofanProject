@@ -9,11 +9,11 @@ BeginPackage["Turbofan`Project`ComponentsModulesImp`Output`MixerOutputImp`",
 
 Begin["`Private`"] (* Begin Private Context *) 
 
-	 CalculateToutMixer[fanObj_,turbineFanObj_,mixerObj_]:=Module[{toutMixer},
+	 CalculateToutMixer[fanObj_,mixerObj_]:=Module[{toutMixer},
 	     toutMixer=ToutMixer[
 	     	fanObj@getBPR[],
-	     	fanObj@getAirFlowSecondOut[]@getT[],
-	     	turbineFanObj@getAirFlowOut[]@getT[]
+	     	mixerObj@getAirFlowIn1[]@getT[],
+	     	mixerObj@getAirFlowin2[]@getT[]
 	     ];
 	     mixerObj@getAirFlowOut[]@setT[toutMixer];
 	 ]

@@ -9,8 +9,8 @@ BeginPackage["Turbofan`Project`ComponentsModules`Output`MixerOutput`",
 
 Begin["`Private`"] (* Begin Private Context *) 
 
-	CalculateMixerOutput[fanObj_,turbineFanObj_,mixerObj_]:=Module[{},
-	 CalculateToutMixer[fanObj,turbineFanObj,mixerObj];   
+	CalculateMixerOutput[fanObj_,mixerObj_]:=Module[{},
+	 CalculateToutMixer[fanObj,mixerObj];   
 	 CalculatePoutMixer[fanObj,mixerObj];   
 	]
 	
