@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19468,        471]
-NotebookOptionsPosition[     18367,        428]
-NotebookOutlinePosition[     18709,        443]
-CellTagsIndexPosition[     18666,        440]
+NotebookDataLength[     19685,        474]
+NotebookOptionsPosition[     18584,        431]
+NotebookOutlinePosition[     18926,        446]
+CellTagsIndexPosition[     18883,        443]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,7 +33,7 @@ Cell[BoxData[
   RowBox[{
    TagBox["LinkObject",
     "SummaryHead"], "[", 
-   DynamicModuleBox[{Typeset`open$$ = False}, 
+   DynamicModuleBox[{Typeset`open$$ = True}, 
     PanelBox[
      PaneSelectorBox[{False->GridBox[{
         {
@@ -125,7 +125,7 @@ GzMvKcH1o4cXABG3d/Y=
               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
              TagBox[
               StyleBox[
-               PaneBox["\<\"JLink-Launch777\"\>",
+               PaneBox["\<\"JLink-Launch847\"\>",
                 BaselinePosition->Baseline,
                 ContentPadding->False,
                 FrameMargins->0,
@@ -161,7 +161,8 @@ GzMvKcH1o4cXABG3d/Y=
           ButtonBox[
            
            DynamicBox[FEPrivate`FrontEndResource[
-            "FEBitmaps", "SquareMinusIconMedium"]],
+            "FEBitmaps", "SquareMinusIconMedium"],
+            ImageSizeCache->{12., {0., 12.}}],
            Appearance->None,
            ButtonFunction:>(Typeset`open$$ = False),
            Evaluator->Automatic,
@@ -243,7 +244,7 @@ GzMvKcH1o4cXABG3d/Y=
              TagBox["\<\"Name: \"\>",
               "SummaryItemAnnotation"], "\[InvisibleSpace]", 
              TagBox[
-              PaneBox["\<\"JLink-Launch777\"\>",
+              PaneBox["\<\"JLink-Launch847\"\>",
                BaselinePosition->Baseline,
                ContentPadding->False,
                FrameMargins->0,
@@ -283,7 +284,7 @@ GzMvKcH1o4cXABG3d/Y=
       ImageSize->Automatic],
      BaselinePosition->Baseline],
     DynamicModuleValues:>{}], "]"}],
-  LinkObject["JLink-Launch777", 108, 7],
+  LinkObject["JLink-Launch847", 219, 11],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
@@ -292,7 +293,8 @@ GzMvKcH1o4cXABG3d/Y=
    3.7862651367708545`*^9, 3.7862651563499107`*^9}, 3.786265186707614*^9, {
    3.786265222707903*^9, 3.7862652657619424`*^9}, 3.7862657819180946`*^9, 
    3.7862658407911215`*^9, 3.7862659668763647`*^9, 3.7862661031277404`*^9, 
-   3.786267028676652*^9, 3.786267263531127*^9, 3.78626735612838*^9}]
+   3.786267028676652*^9, 3.786267263531127*^9, 3.78626735612838*^9, 
+   3.7862692879100246`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -307,14 +309,14 @@ Cell[BoxData[
    RowBox[{"JavaObject", "[", 
     RowBox[{"com", ".", "component", ".", "inlet", ".", "Inlet"}], "]"}], 
    "\[RightGuillemet]"}],
-  JLink`Objects`vm2`JavaObject4466259718569985]], "Output",
+  JLink`Objects`vm3`JavaObject12144931971792897]], "Output",
  CellChangeTimes->{
   3.786263557389303*^9, 3.786263682134852*^9, 3.786263738332809*^9, 
    3.786264153826253*^9, 3.786264912309379*^9, {3.7862651397551327`*^9, 
    3.7862651578555417`*^9}, 3.7862651881547785`*^9, {3.7862652253004074`*^9, 
    3.7862652668663054`*^9}, 3.786265783270314*^9, 3.7862658542563524`*^9, 
    3.786265968088664*^9, 3.786266104189127*^9, 3.786267031462044*^9, 
-   3.786267264541545*^9, 3.786267356907932*^9}]
+   3.786267264541545*^9, 3.786267356907932*^9, 3.786269289004392*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -330,12 +332,12 @@ Cell[BoxData[
    RowBox[{"JavaObject", "[", 
     RowBox[{"com", ".", "component", ".", "compressor", ".", "Compressor"}], 
     "]"}], "\[RightGuillemet]"}],
-  JLink`Objects`vm2`JavaObject423181164740609]], "Output",
+  JLink`Objects`vm3`JavaObject25171561958866945]], "Output",
  CellChangeTimes->{
   3.786264947631996*^9, {3.786265237534348*^9, 3.786265267505937*^9}, 
    3.786265784116825*^9, 3.786265854790043*^9, 3.7862659688532257`*^9, 
    3.786266104814766*^9, 3.7862670321966195`*^9, 3.786267264973296*^9, 
-   3.7862673573746614`*^9}]
+   3.7862673573746614`*^9, 3.7862692959533825`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -353,13 +355,14 @@ Cell[BoxData[
    RowBox[{"JavaObject", "[", 
     RowBox[{"com", ".", "component", ".", "inlet", ".", "Inlet"}], "]"}], 
    "\[RightGuillemet]"}],
-  JLink`Objects`vm2`JavaObject4379879118209025]], "Output",
+  JLink`Objects`vm3`JavaObject9674061412040705]], "Output",
  CellChangeTimes->{{3.786263930968278*^9, 3.7862639460305853`*^9}, {
    3.7862640248860273`*^9, 3.786264039236747*^9}, 3.786264096314809*^9, 
    3.786264157246502*^9, 3.786264200439166*^9, 3.7862649137695503`*^9, {
    3.7862652383438945`*^9, 3.7862652680076475`*^9}, 3.7862657849643354`*^9, 
    3.786265855380714*^9, 3.7862659693819175`*^9, 3.7862661052665043`*^9, 
-   3.7862670330311375`*^9, 3.7862672654140415`*^9, 3.7862673577664347`*^9}]
+   3.7862670330311375`*^9, 3.7862672654140415`*^9, 3.7862673577664347`*^9, 
+   3.786269298230068*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -381,7 +384,7 @@ Cell[BoxData[
   RowBox[{"getT", "[", "]"}], "]"}]], "Output",
  CellChangeTimes->{3.7862658711176214`*^9, 3.7862659707141495`*^9, 
   3.7862661062999372`*^9, 3.7862670344393263`*^9, 3.7862672665343947`*^9, 
-  3.786267358741872*^9}]
+  3.786267358741872*^9, 3.786269299533335*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -395,12 +398,12 @@ Cell[BoxData[
   RowBox[{"JavaClass", "[", 
    RowBox[{"java", ".", "lang", ".", "System"}], ",", "<>", "]"}],
   JLink`JavaClass["java.lang.System", 5, {
-    JLink`JVM["vm2"]}, 1, "java`lang`System`", False, True]]], "Output",
+    JLink`JVM["vm3"]}, 1, "java`lang`System`", False, True]]], "Output",
  CellChangeTimes->{
   3.786264960539548*^9, {3.7862652401698275`*^9, 3.786265269930537*^9}, 
    3.7862658069036765`*^9, 3.7862658768553104`*^9, 3.786265971564658*^9, 
    3.7862661071004467`*^9, 3.786267035218876*^9, {3.786267267109063*^9, 
-   3.7862672697115746`*^9}, 3.7862673593275337`*^9}]
+   3.7862672697115746`*^9}, 3.7862673593275337`*^9, 3.7862693001829414`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -414,7 +417,7 @@ Cell[BoxData["\<\"1.8.0_201\"\>"], "Output",
   3.7862649882205753`*^9, {3.7862652406935253`*^9, 3.786265270453236*^9}, 
    3.7862658075882807`*^9, 3.7862658776288633`*^9, 3.7862659720603724`*^9, 
    3.7862661076511297`*^9, 3.786267035878495*^9, {3.786267267830646*^9, 
-   3.7862672704061594`*^9}, 3.786267359829258*^9}]
+   3.7862672704061594`*^9}, 3.786267359829258*^9, 3.786269300876541*^9}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -445,34 +448,34 @@ Notebook[{
 Cell[558, 20, 121, 2, 31, "Input"],
 Cell[CellGroupData[{
 Cell[704, 26, 127, 2, 31, "Input"],
-Cell[834, 30, 12582, 264, 72, "Output"]
+Cell[834, 30, 12656, 266, 92, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13453, 299, 162, 2, 31, "Input"],
-Cell[13618, 303, 689, 13, 31, "Output"]
+Cell[13527, 301, 162, 2, 31, "Input"],
+Cell[13692, 305, 712, 13, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14344, 321, 175, 3, 31, "Input"],
-Cell[14522, 326, 529, 11, 31, "Output"]
+Cell[14441, 323, 175, 3, 31, "Input"],
+Cell[14619, 328, 555, 11, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15088, 342, 263, 5, 31, "Input"],
-Cell[15354, 349, 698, 12, 31, "Output"]
+Cell[15211, 344, 263, 5, 31, "Input"],
+Cell[15477, 351, 724, 13, 31, "Output"]
 }, Open  ]],
-Cell[16067, 364, 234, 5, 31, "Input"],
+Cell[16216, 367, 234, 5, 31, "Input"],
 Cell[CellGroupData[{
-Cell[16326, 373, 149, 3, 31, "Input"],
-Cell[16478, 378, 252, 5, 31, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[16767, 388, 156, 2, 31, "Input"],
-Cell[16926, 392, 538, 10, 31, "Output"]
+Cell[16475, 376, 149, 3, 31, "Input"],
+Cell[16627, 381, 274, 5, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17501, 407, 158, 2, 31, "Input"],
-Cell[17662, 411, 339, 5, 31, "Output"]
+Cell[16938, 391, 156, 2, 31, "Input"],
+Cell[17097, 395, 562, 10, 31, "Output"]
 }, Open  ]],
-Cell[18016, 419, 347, 7, 52, "Input"]
+Cell[CellGroupData[{
+Cell[17696, 410, 158, 2, 31, "Input"],
+Cell[17857, 414, 361, 5, 31, "Output"]
+}, Open  ]],
+Cell[18233, 422, 347, 7, 52, "Input"]
 }
 ]
 *)
