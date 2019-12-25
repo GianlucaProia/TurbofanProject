@@ -12,7 +12,7 @@ Begin["`Private`"] (* Begin Private Context *)
 	(* ============================================================================= *)
 	(* Turbina del compressore *)
 	CalculateToutCompressorTurbine[combustorObj_,compressorObj_,turbineObj_]:=Module[{compTurbineTout},
-	 	compTurbineTout=CalculateToutCompressorTurbine[
+	 	compTurbineTout=ToutCompressorTurbine[
 	 		compressorObj@getAirFlowIn[]@getT[],
 	 		compressorObj@getAirFlowOut[]@getT[],
 	 		compressorObj@getAirflowOut[]@getMassFlowRate[],
@@ -25,7 +25,7 @@ Begin["`Private`"] (* Begin Private Context *)
 	]
 
 	CalculatePoutCompressorTurbine[turbineObj_]:=Module[{compTurbinePout},
-		compTurbinePout=CalculatePoutCompressorTurbine[
+		compTurbinePout=PoutCompressorTurbine[
 		 	turbineObj@getAirFlowIn[]@getP[],
 		 	turbineObj@getAirFlowIn[]@getT[],
 		 	turbineObj@getAirFlowOut[]@getT[],
