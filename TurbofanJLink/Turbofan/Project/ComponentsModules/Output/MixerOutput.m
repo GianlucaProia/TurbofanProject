@@ -11,7 +11,7 @@ Begin["`Private`"] (* Begin Private Context *)
 
 	CalculateMixerOutput[fanObj_,mixerObj_]:=Module[{},
 	 CalculateToutMixer[fanObj,mixerObj];   
-	 CalculatePoutMixer[fanObj,mixerObj];   
+	 CalculatePoutMixer[mixerObj];   
 	]
 	
 	

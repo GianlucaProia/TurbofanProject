@@ -17,7 +17,13 @@ Begin["`Private`"] (* Begin Private Context *)
 	     ];
 	     mixerObj@getAirFlowOut[]@setT[toutMixer];
 	 ]
-
+	
+	CalculatePoutMixer[mixerObj_]:=Module[{poutMixer},
+	    poutMixer=PoutMIxer[
+	     	mixerObj@getAirFlowIn1[]@getP[]   
+	    ];
+		mixerObj@getAirFlowOut[]@setP[poutMixer];
+	]
 
 End[] (* End Private Context *)
 
