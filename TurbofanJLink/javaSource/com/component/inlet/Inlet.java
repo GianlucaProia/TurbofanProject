@@ -10,7 +10,7 @@ public class Inlet {
 	private double Rout;
 	
 	private double lenght;
-	private double epsiloD;
+	private double epsilonD;
 	
 	private AirFlow airFlowIn;
 	private AirFlow airFlowOut;
@@ -61,11 +61,11 @@ public class Inlet {
 	public void setAirFlowOut(AirFlow airFlowOut) {
 		this.airFlowOut = airFlowOut;
 	}
-	public double getEpsiloD() {
-		return epsiloD;
+	public double getEpsilonD() {
+		return epsilonD;
 	}
-	public void setEpsiloD(double epsiloD) {
-		this.epsiloD = epsiloD;
+	public void setEpsilonD(double epsiloD) {
+		this.epsilonD = epsilonD;
 	}
 	
 }
